@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="DarkA7" parent="android:Theme.Material.NoActionBar" >
+        <item name="android:colorAccent">@color/accent_material_dark</item>
+        <item name="android:textColorSecondary">@color/text_color_secondary</item>
+        <item name="android:colorBackground">@android:color/black</item>
+    </style>
+
+    <style name="LightA7" parent="android:Theme.Material.Light.NoActionBar" >
+        <item name="android:colorPrimary">@color/colorPrimary</item>
+        <item name="android:colorAccent">@color/accent_material_light</item>
+        <item name="android:navigationBarColor">@android:color/holo_blue_dark</item>
+        <item name="android:statusBarColor">?android:attr/navigationBarColor</item>
+        <item name="android:textColorSecondary">@color/text_color_secondary</item>
+        <item name="android:colorForeground">@color/colorPrimaryDark</item>
+    </style>
+</resources>

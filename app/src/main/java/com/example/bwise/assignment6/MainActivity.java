@@ -35,10 +35,10 @@ public class MainActivity extends Activity implements SeekBar.OnSeekBarChangeLis
         //set listener
         seekBar.setOnSeekBarChangeListener(this);
 
-        textViewPercent.setText("Tip Percentage:    " + 20);
+        textViewPercent.setText("Tip Percentage:    " + 18);
     }
 
-    public void calculateAndDisplay(int progress){
+    public void calculateAndDisplay(){
 
         // get the bill amount
         //billAmountString = editTextEntry.getText().toString();
@@ -47,7 +47,7 @@ public class MainActivity extends Activity implements SeekBar.OnSeekBarChangeLis
         billAmount = Float.parseFloat(editTextEntry.getText().toString());
 
         // calculate tip amount
-        float tipPercent = progress;
+        float tipPercent = seekBar.getProgress();
         float tipAmount = (billAmount * tipPercent) / 100;
 
 
@@ -64,7 +64,7 @@ public class MainActivity extends Activity implements SeekBar.OnSeekBarChangeLis
     public void onProgressChanged(SeekBar seekBar, int progress, boolean b) {
         //Toast.makeText(getApplicationContext(), "Percentage: " + progress, Toast.LENGTH_SHORT).show();
         textViewPercent.setText("Tip Percentage:    " + progress);
-        calculateAndDisplay(progress);
+
     }
 
     @Override
@@ -74,6 +74,8 @@ public class MainActivity extends Activity implements SeekBar.OnSeekBarChangeLis
 
     @Override
     public void onStopTrackingTouch(SeekBar seekBar) {
+        Toast.makeText(getApplicationContext(), "Tip Percentage Set", Toast.LENGTH_LONG).show();
+        calculateAndDisplay();
 
     }
 }

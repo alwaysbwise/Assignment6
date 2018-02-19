@@ -14,8 +14,8 @@
         android:layout_marginEnd="16dp"
         android:layout_marginStart="44dp"
         android:layout_marginTop="32dp"
-        android:max="100"
-        android:progress="20"
+        android:max="50"
+        android:progress="18"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -57,19 +57,15 @@
         android:id="@+id/textViewValue"
         android:layout_width="124dp"
         android:layout_height="45dp"
-        android:layout_marginBottom="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="44dp"
         android:text="@string/textViewValue"
         android:textAlignment="center"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.586"
-        app:layout_constraintStart_toEndOf="@+id/textView5"
-        app:layout_constraintTop_toBottomOf="@+id/seekBar"
-        app:layout_constraintVertical_bias="0.057" />
+        app:layout_constraintStart_toEndOf="@+id/textView5" />
 
     <TextView
         android:id="@+id/textView4"
