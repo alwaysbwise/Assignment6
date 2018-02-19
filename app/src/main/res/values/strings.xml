@@ -2,5 +2,5 @@
     <string name="app_name">Assignment6</string>
     <string name="textViewValue"></string>
     <string name="editTextEntry"></string>
-    <string name="textViewPercent" />
+    <string name="textViewPercent">Tip Percentage:    18</string>
 </resources>
