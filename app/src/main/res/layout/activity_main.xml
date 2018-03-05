@@ -62,7 +62,8 @@
         android:layout_marginStart="16dp"
         android:text="@string/textViewValue"
         android:textAlignment="center"
-        android:textSize="18sp"
+        android:textColor="@color/accent_material_dark"
+        android:textSize="24sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.586"
@@ -101,7 +102,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:layout_marginTop="16dp"
-        android:elevation="5dp"
+        android:elevation="10dp"
         android:text="Calculate"
         android:textAlignment="center"
         android:textColor="@color/accent_material_dark"
@@ -112,4 +113,41 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.862" />
+
+    <Button
+        android:id="@+id/buttonSettings"
+        android:layout_width="67dp"
+        android:layout_height="34dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="264dp"
+        android:layout_marginTop="8dp"
+        android:elevation="3dp"
+        android:onClick="displaySettings"
+        android:text="Settings"
+        android:textAlignment="center"
+        android:textColor="@color/accent_material_dark"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintVertical_bias="0.757" />
+
+    <Button
+        android:id="@+id/buttonViewSettings"
+        android:layout_width="67dp"
+        android:layout_height="34dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="148dp"
+        android:layout_marginLeft="32dp"
+        android:elevation="3dp"
+        android:onClick="readSettings"
+        android:text="View"
+        android:textColor="@color/accent_material_dark"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonSettings"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
 </android.support.constraint.ConstraintLayout>

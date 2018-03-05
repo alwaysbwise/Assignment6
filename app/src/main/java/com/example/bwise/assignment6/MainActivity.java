@@ -1,7 +1,12 @@
 package com.example.bwise.assignment6;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -82,4 +87,33 @@ public class MainActivity extends Activity implements SeekBar.OnSeekBarChangeLis
         calculateAndDisplay();
 
     }
+    /*/////////////////////trying to get an options menu for settings
+    //display the menu
+    public boolean onCreateOptionsMenu(Menu menu){
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.options_menu, menu);
+        displaySettings(View view);
+
+        return true;
+    }
+    */
+
+    public void displaySettings(View view){
+
+        //start settings activity
+        startActivity(new Intent(this, SettingsActivity.class));
+    }
+
+    public void readSettings(View view){
+
+        //read the value which is stored in a key/value pair
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+
+        //pulling the value from the settings activity
+        String setting1 = prefs.getString("example_text", "John Smith");
+
+        //display the value in a toast
+        Toast.makeText(this, setting1, Toast.LENGTH_LONG).show();
+    }
+
 }
